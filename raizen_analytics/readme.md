@@ -12,7 +12,7 @@ mostrar os mesmos resultados do arquivo original
 
 1. [Objetivos](#objetivos)
 2. [Resumo](#resumo)
-3. [Respostas SQL](#respostas-sql)
+3. [Comparando os dados](#comparando-os-dados)
 4. [Execução](#execução)
 
 
@@ -33,12 +33,10 @@ Os dados devem ser extraídos para uma única tabela, com o seguinte schema:
 
 Os totais dos dados extraídos devem ser iguais aos totais das tabelas dinâmicas.
 
-Também foi disponibilizado a modelagem do banco de dados.
-
 
 ### Resumo
 
-Tecnlogias utilizadas:
+Tecnologias utilizadas:
 * Linguagem de programação: ```Python 3.8```
 * Banco de dados: ```Postgresql 13```
 * Biblioteca para conexão com banco de dados: ```SQL Alchemy```

@@ -33,7 +33,7 @@ O tratamento dos dados deve seguir algumas regras já estabelecidas pelo desafio
 
 ### Resumo
 
-Tecnlogias utilizadas:
+Tecnologias utilizadas:
 * Linguagem de programação: ```Python 3.8```
 * Banco de dados: ```Postgresql 13```
 * Biblioteca para conexão com banco de dados: ```SQL Alchemy```
