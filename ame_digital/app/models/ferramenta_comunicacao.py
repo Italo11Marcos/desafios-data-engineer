@@ -10,7 +10,7 @@ class FerramentaComunicacao(Base):
 
     id: int = Column(BigInteger, primary_key=True, autoincrement=True)
     nome: str = Column(String(100))
-    respondentes = relationship('Respondente', secondary = 'resp_usa_ferramenta', cascade="all, delete")
+    respondentes = relationship('Respondente', secondary='resp_usa_ferramenta', cascade="all, delete")
 
 
     def __repr__(self) -> str:

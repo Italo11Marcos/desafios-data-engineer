@@ -1,0 +1,41 @@
+version: '3.8'
+services:
+  data:
+    container_name: python
+    depends_on:
+      - postgres
+    build: ./app
+    env_file:
+      - .env
+    networks:
+      - dbwork
+
+  postgres:
+    image: postgres:13
+    container_name: postgres_13
+    user: postgres
+    environment:
+      POSTGRES_DB: "${POSTGRES_DB}"
+      POSTGRES_HOST: "${POSTGRES_HOST}"
+      POSTGRES_PASSWORD: "${POSTGRES_PASSWORD}"
+      POSTGRES_PORT: "${POSTGRES_PORT}"
+      POSTGRES_USER: "${POSTGRES_USER}"
+    volumes:
+      - postgres-db-volume:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready"]
+      interval: 10s
+      retries: 5
+      start_period: 5s
+    restart: always
+    ports:
+      - 5432:5432
+    networks:
+      - dbwork
+
+networks:
+  dbwork:
+    driver: bridge
+
+volumes:
+  postgres-db-volume:

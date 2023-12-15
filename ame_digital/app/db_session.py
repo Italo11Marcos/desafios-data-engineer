@@ -1,3 +1,5 @@
+import os
+
 import sqlalchemy as sa
 
 from sqlalchemy.orm import sessionmaker, Session
@@ -10,6 +12,13 @@ from sqlalchemy.future.engine import Engine
 from models.model_base import Base
 
 __engine: Optional[Engine] = None
+
+DB=os.getenv('POSTGRES_DB')
+USER=os.getenv('POSTGRES_USER')
+PASSWORD=os.getenv('POSTGRES_PASSWORD')
+HOST=os.getenv('POSTGRES_HOST')
+PORT=os.getenv('POSTGRES_PORT')
+
 
 def create_engine(sqlite: bool = False) -> Engine:
     """
@@ -32,10 +41,11 @@ def create_engine(sqlite: bool = False) -> Engine:
         conn_str = "postgresql://user:password@localhost:5432/database"
         __engine = sa.create_engine(url=conn_str, echo=False)
     """
-    conn_str = "postgresql://user:password@localhost:5432/database"
+    conn_str = f"postgresql://{USER}:{PASSWORD}@{HOST}:{PORT}/{DB}"
     __engine = sa.create_engine(url=conn_str, echo=False)
 
     return __engine
+
 
 def create_session() -> Session:
     """
@@ -51,6 +61,7 @@ def create_session() -> Session:
     session: Session = __session()
 
     return session
+
 
 def create_tables() -> None:
     global __engine

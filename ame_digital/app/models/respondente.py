@@ -18,9 +18,9 @@ class Respondente(Base):
     contrib_open_source: int = Column(Integer)
     programa_hobby: int = Column(Integer)
     salario: float = Column(Float)
-    sistema_operacional_id: int = Column(Integer, ForeignKey("sistemas_operacionais.id",ondelete="CASCADE"))
-    pais_id: int = Column(Integer, ForeignKey('paises.id',ondelete="CASCADE"))
-    empresa_id: int = Column(Integer, ForeignKey('empresas.id',ondelete="CASCADE"))
+    sistema_operacional_id: int = Column(Integer, ForeignKey("sistemas_operacionais.id", ondelete="CASCADE"))
+    pais_id: int = Column(Integer, ForeignKey('paises.id', ondelete="CASCADE"))
+    empresa_id: int = Column(Integer, ForeignKey('empresas.id', ondelete="CASCADE"))
 
 
     def __repr__(self) -> str:
