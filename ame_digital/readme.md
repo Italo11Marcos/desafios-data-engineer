@@ -52,27 +52,35 @@ Para execução, foi utilizado ```Docker``` para isolar o ambiente de desenvolvi
 [Arquivo consultas .sql](docs/amedigital.sql)
 
 1. Qual a quantidade de respondentes de cada país?
+
 ![](docs/1.png)
 
 2. Quantos usuários que moram em "United States" gostam de Windows?
+
 ![](docs/2.png)
 
 3. Qual a média de salário dos usuários que moram em Israel e gostam de Linux?
+
 ![](docs/3.png)
 
 4. Qual a média e o desvio padrão do salário dos usuários que usam Slack para cada tamanho de empresa disponível?
+
 ![](docs/4.png)
 
 5. Qual a diferença entre a média de salário dos respondentes do Brasil que acham que criar código é um hobby e a média de todos de salário de todos os respondentes brasileiros agrupado por cada sistema operacional que eles usam?
+
 ![](docs/5.png)
 
 6. Quais são as top 3 tecnologias mais usadas pelos desenvolvedores?
+
 ![](docs/6.png)
 
 7. Quais são os top 5 países em questão de salário?
+
 ![](docs/7.png)
 
-8. Quantos usuários ganham mais de 5 salários mínimos em cada um desses países.
+8. Quantos usuários ganham mais de 5 salários mínimos em cada um desses países?
+
 ![](docs/8.png)
 
 ### Execução
