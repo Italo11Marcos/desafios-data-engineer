@@ -1,7 +1,11 @@
 import pandas as pd
 from unidecode import unidecode
 
-from utils import treat_dataframe, connection
+from db import connection
+from tracer import Tracer
+from sqlalchemy import text
+
+t = Tracer()
 
 
 def classify_combustivel(col):
@@ -48,14 +52,16 @@ def read_xlsx(path):
 
 def remove_acent(df):
 
+    df.columns = [unidecode(c.upper()) for c in df.columns]
+
     df['COMBUSTIVEL'] = df['COMBUSTIVEL'].astype(str)
-    df['COMBUSTIVEL'] = df['COMBUSTIVEL'].apply(unidecode)
+    df['COMBUSTIVEL'] = df['COMBUSTIVEL'].map(unidecode)
 
     df['REGIAO'] = df['REGIAO'].astype(str)
-    df['REGIAO'] = df['REGIAO'].apply(unidecode)
+    df['REGIAO'] = df['REGIAO'].map(unidecode)
 
     df['ESTADO'] = df['ESTADO'].astype(str)
-    df['ESTADO'] = df['ESTADO'].apply(unidecode)
+    df['ESTADO'] = df['ESTADO'].map(unidecode)
 
     return df
 
@@ -105,11 +111,25 @@ def insert_into_postgresl(df_final):
     # Chama a função para criar a conexão com o BD
     engine = connection()
 
+    statment = """
+        create table if not exists anp_sales (
+        year_month varchar(7),
+        uf varchar(20),
+        product varchar(50),
+        unit varchar(10),
+        volume numeric(10,2),
+        created_at timestamp
+    );
+    """
+    # Cria a tabela se não existir
+    with engine.connect() as conn:
+        conn.execute(text(statment))
+
     # Transforma as colunas em lower case para fazer o insert no BD
     df_final.columns = [c.lower() for c in df_final.columns]
 
     # Faz a inserção no BD
     df_final.to_sql("anp_sales", engine, if_exists='append', index=False)
 
-    print('Insert concluído')
+    t.log_info('Inserção banco de dados concluído')
 

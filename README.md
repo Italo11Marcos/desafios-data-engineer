@@ -11,3 +11,12 @@ Repositório com alguns desafios para data engineer de processos seletivos de em
 * ``Docker`` para isolamento do ambiente e persistência dos dados
 * Banco de dados utilizado: ``Postgresql 13``
 * Perguntas respondidas com sql
+
+### **[Raizen Analytics](/raizen_analytics)**
+* Realizei ETL de uma base de dados e populei no banco de dados
+* Os dados estavam um arquivo ``.xlsx`` com 6 sheets
+* Utilizei ``python`` para obter os dados e a biblioteca ``Pandas`` para os tratamentos necessários
+* Para modelagem de dados e conexão com banco de dados, utilizei a biblioteca ``Sql Alchemy``
+* ``Docker`` para isolamento do ambiente e persistência dos dados
+* Banco de dados utilizado: ``Postgresql 13``
+* Os dados das tabelas dinâmicas do arquivo ``.xlxs`` continuaram iguais depois do ETL
