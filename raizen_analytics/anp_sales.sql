@@ -1,4 +1,4 @@
-// Cria a tabela anp_sales particionada pela unit
+-- Cria a tabela anp_sales particionada pela unit
 create table anp_sales (
 	year_month varchar(7),
 	uf varchar(20),
