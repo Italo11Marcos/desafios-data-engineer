@@ -33,6 +33,9 @@ Deve ser feita a modelagem utilizando o ``esquema estrela`` e responder os segui
 Tecnologias utilizadas:
 * Pyspark
 * Jupyter Notebook
+* Modelagem:
+
+    ![](modelagem.png)
 
 ### Execução
 * ``microdados_enem.ipynb`` contem todo o código e os indicadores respondidos 
