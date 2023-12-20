@@ -20,3 +20,8 @@ Repositório com alguns desafios para data engineer de processos seletivos de em
 * ``Docker`` para isolamento do ambiente e persistência dos dados
 * Banco de dados utilizado: ``Postgresql 13``
 * Os dados das tabelas dinâmicas do arquivo ``.xlxs`` continuaram iguais depois do ETL
+
+### **[Microdados Enem](/microdados_enem)**
+* Realizei ETL de uma base de dados
+* Modelagem dimensional de dados com esquema estrela
+* Jupyter notebook com pyspark para responder os indicadores
