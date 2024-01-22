@@ -25,3 +25,8 @@ Repositório com alguns desafios para data engineer de processos seletivos de em
 * Realizei ETL de uma base de dados
 * Modelagem dimensional de dados com esquema estrela
 * Jupyter notebook com pyspark para responder os indicadores
+
+### **[LEGO ETL](/lego)**
+* Realizei ETL de uma base de dados
+* Fiz o código utilizando POO
+* Fiz o upload de arquivos num bucket da AWS s3
