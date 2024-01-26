@@ -28,7 +28,7 @@ Repositório com alguns desafios para data engineer de processos seletivos de em
 
 ### **[LEGO ETL](/lego)**
 * Realizei ETL de uma base de dados
-* Fiz o código utilizando POO
+* Fiz o código com abordagem orientada a objetos (POO)
 * Fiz o upload de arquivos num bucket da AWS s3
 
 ### **[PokéSelect](/pokemon/)**
