@@ -30,3 +30,10 @@ Repositório com alguns desafios para data engineer de processos seletivos de em
 * Realizei ETL de uma base de dados
 * Fiz o código utilizando POO
 * Fiz o upload de arquivos num bucket da AWS s3
+
+### **[PokéSelect](/pokemon/)**
+* Desenvolvi uma aplicação para permitir aos usuários selecionar e explorar Pokémons com base em seus tipos
+* Realizei scrapy de uma página para obter todos os pokemons
+* Tratei os dados e exportei em formato .json
+* Utilizei o mongobd como banco de dados
+* Utilizei flask como backend

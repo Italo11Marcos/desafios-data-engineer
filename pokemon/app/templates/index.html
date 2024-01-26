@@ -1,0 +1,74 @@
+{% extends "template.html" %}
+
+{% block title %}Pokemons{% endblock %}
+
+{% block conteudo %}
+
+<div class="container">
+
+    <div class="card mt-5 mb-5">
+
+        <img src="{{ url_for('static', filename='imgs/pokemon-logo.png') }}" class="header-img">
+        <div class="card-body">
+            <form action="{{ url_for('index') }}" method="post">
+                <div class="container">
+                    <div class="row">
+                    <!-- Select 1 -->
+                  <div class="col">
+                      <select class="form-select" name="type1">
+                            <option value="nulo" selected></option>
+                            {% for type in all_types %}
+                                <option value={{ type }}>{{ type }}</option>
+                            {% endfor %}
+                      </select>
+                  </div>
+                    <!-- End Select 1 -->
+                    <!-- Select 2 -->
+                  <div class="col">
+                        <select class="form-select" name="type2">
+                            <option value="nulo" selected></option>
+                            {% for type in all_types %}
+                                <option value={{ type }}>{{ type }}</option>
+                            {% endfor %}
+                        </select>
+                  </div>
+                    <!-- End Select 2 -->
+                  <div class="col">
+                      <button class="btn btn-primary" type="submit">OK</button>
+                  </div>
+                    </div>
+                </div>
+            </form>
+
+            <div class="container mt-3">
+                <div class="row">
+                    {% if pokes %}
+                        {% for p in pokes %}
+                        <div class="col-sm-4 py-2">
+                            <div class="card h-100">
+                                <div class="card-header text-center">
+                                    <button class="type-icon type-{{p['TYPE'][0].lower()}}">{{ p['TYPE'][0] }}</button>
+                                    {% if p['TYPE']|length > 1 %}
+                                    <button class="type-icon type-{{p['TYPE'][1].lower()}}">{{ p['TYPE'][1] }}</button>
+                                    {% endif %}
+                                </div>
+                                <div class="card-body">
+                                    <img src="{{ p['ICONS'][0] }}" class="pokes-img" alt={{ p['NAME'] }}>
+                                </div>
+                                <div class="card-footer text-body-secondary">
+                                    <h5 class="card-title text-center">#{{ p['POKEID'] }} - {{ p['NAME'] }}</h5>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+{% endblock %}
