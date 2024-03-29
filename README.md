@@ -24,16 +24,23 @@ Repositório com alguns desafios para data engineer de processos seletivos de em
 ### **[Microdados Enem](/microdados_enem)**
 * Realizei ETL de uma base de dados
 * Modelagem dimensional de dados com esquema estrela
-* Jupyter notebook com pyspark para responder os indicadores
+* Jupyter notebook com ``pyspark`` para responder os indicadores
 
 ### **[LEGO ETL](/lego)**
 * Realizei ETL de uma base de dados
 * Fiz o código com abordagem orientada a objetos (POO)
-* Fiz o upload de arquivos num bucket da AWS s3
+* Fiz o upload de arquivos num bucket da ``AWS s3``
 
 ### **[PokéSelect](/pokemon/)**
 * Desenvolvi uma aplicação para permitir aos usuários selecionar e explorar Pokémons com base em seus tipos
 * Realizei scrapy de uma página para obter todos os pokemons
 * Tratei os dados e exportei em formato .json
-* Utilizei o mongobd como banco de dados
-* Utilizei flask como backend
+* Utilizei o ``mongobd`` como banco de dados
+* Utilizei ``flask`` como backend
+
+### **[Vuttr](/vuttr/)**
+* Baseado neste desafio da [Bossabox](https://bossabox.notion.site/Back-end-0b2c45f1a00e4a849eefe3b1d57f23c6)
+* Desenvolvi uma aplicação RestAPi utilizando `FastAPI`
+* Faz insert de objetos json com lista
+* Faz busca a partir de elementos de uma lista
+* Utilizei o `Postgresql` como banco de dados
