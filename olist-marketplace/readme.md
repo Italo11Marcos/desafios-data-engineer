@@ -43,7 +43,7 @@ Os arquivos ```.csv``` podem ser encontrados [aqui](/olist-marketplace/data/).
 
 1. **Extração dos dados (Transient)**
 
-    - Para fins didáticos, os dados foram adicionados no [github](/olist-marketplace/data/csv/) no repositório
+    - Para fins didáticos, os dados foram adicionados [aqui mesmo](/olist-marketplace/data/csv/) no repositório
     - Azure Data Factory: ADF foi configurado para baixar os dados brutos do git e armazená-los no Azure Data Lake Storage na camada ```Transient```. Nessa camada, os dados foram salvos em formato ```.parquet```, sem qualquer transformação e são deletados após a finalização total do processo da camada ```Bronze```
 
 2. **Transformação dos Dados (Bronze)**
