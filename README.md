@@ -4,6 +4,14 @@ Repositório com alguns desafios para data engineer de processos seletivos de em
 
 ## **PROJETOS**
 
+### **[Projeto Olist Marketplace](/olist-marketplace/)**
+* Projeto de ETL com dados de E-commerce Brasileiro
+* Pipeline de dados utlizando:
+    - Azure Data Factory (ADF)
+    - Azure Data Lake Storage (ADLS)
+    - Azure Databricks
+    - Arquitetura Medalhão
+
 ### **[Ame Digital](/ame_digital)**
 * Realizei ETL de uma base de dados e populei no banco de dados
 * Utilizei ``python`` para obter os dados e a biblioteca ``Pandas`` para os tratamentos necessários
